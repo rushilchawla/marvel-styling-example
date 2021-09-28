@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    flex-wrap: wrap;
+    
+    background: black;
+}
+
+.box{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    background: black;
+    transition: 0.5s;
+    color: white;
+}
+
+
+.box .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.box .imgBx img{
+    max-width: 100%;
+    opacity: 0.3;
+    transition: 0.5s;
+}
+
+.box:hover .imgBx img{
+    opacity: 1;
+}
+
+.box:before{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+}
+
+.box:after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -2;
+    filter: blur(50px);
+}
+
+.content{
+    padding: 9px;
+    text-align: center;
+    font-size: 15px;
+}
+
+span{
+    font-family: cursive;
+    font-size: 13px;
+}
+
+
+.box:before,
+.box:after{
+    background: rgb(63,94,251);
+background: linear-gradient(0deg, rgba(63,94,251,1) 3%, rgba(252,70,107,1) 100%);
+}
+
